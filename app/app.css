@@ -1,0 +1,17 @@
+/* app css stylesheet */
+
+body {
+    padding: 25px;
+}
+
+.list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    background: #ebebeb;
+    padding: 5px;
+    border-bottom: 3px solid #CACACA;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+
+  <form>
+    <h3>Add new item</h3>
+    <input type="text" placeholder="title" ng-model="data.title" />
+    <input type="text" placeholder="description" ng-model="data.description"  />
+    <button ng-click="addItem(data);" >Add</button>
+    Пошук <input type="text" placeholder="phrase" ng-model="search" />
+  </form>
+  <span>Показано {{(items|filter:search).length}} з {{items.length}}</span>
+
+  <hr />
+
+
+  <list id="aaa" items="items | filter:search" ></list>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/app.controller.js"></script>
+  <script src="directives/list.js"></script>
+  <script src="directives/list-item.js"></script>
+  <script src="service/service.js"></script>
+</body>
+</html>
