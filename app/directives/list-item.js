@@ -9,7 +9,7 @@ function listItemDirective() {
       id: '=',
       title: '=',
       description: '=',
-      deleteItem: '&',
+      item: '='
     },
     templateUrl: 'templates/list-item.html',
     link: function($scope) {

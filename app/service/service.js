@@ -27,8 +27,8 @@ angular.module('myApp')
             },
 
 						deleteItem : function(obj) {
-							console.log(obj.id);
-              arr.splice(obj.id, obj.id)
+							console.log(obj);
+              arr.splice(obj.id, 1)
               arr.forEach( function(item, i) {
                 item.id = i;
               });
